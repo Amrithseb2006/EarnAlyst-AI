@@ -4,29 +4,30 @@ This Earnings Call Q&A Bot is a Retrieval-Augmented Generation (RAG) system buil
 ________________________________________
 ## 🔍 Key Features
 ✉️ Context-Aware Q&A
-•	Uses OpenAI's text-embedding-3-small model to embed both the question and transcript chunks.
 
-•	Retrieves the top relevant chunks using Pinecone and formulates answers using GPT-4o-mini.
-
-•	Ensures answers are derived strictly from the document context, avoiding hallucinations.
+  •	Uses OpenAI's text-embedding-3-small model to embed both the question and transcript chunks.
+  
+  •	Retrieves the top relevant chunks using Pinecone and formulates answers using GPT-4o-mini.
+  
+  •	Ensures answers are derived strictly from the document context, avoiding hallucinations.
 
 📄 Speaker & Role Attribution
 
-•	Integrates speaker metadata (name and role) into every chunk.
-
-•	Uses a separate speaker.py module to:
-
-o	Extract the introductory section from the PDF.
-
-o	Automatically map speaker names to their respective roles using GPT.
-
-•	Provides role-tagged answers, e.g., "[Page 3 | John Smith, CFO]"
+  •	Integrates speaker metadata (name and role) into every chunk.
+  
+  •	Uses a separate speaker.py module to:
+  
+  o	Extract the introductory section from the PDF.
+  
+  o	Automatically map speaker names to their respective roles using GPT.
+  
+  •	Provides role-tagged answers, e.g., "[Page 3 | John Smith, CFO]"
 
 📈 Financial-Focused Instruction
 
-•	System prompt tuned specifically for financial document Q&A.
-
-•	Instructs the model to cite pages and reject queries if the answer isn't found in the transcript.
+  •	System prompt tuned specifically for financial document Q&A.
+  
+  •	Instructs the model to cite pages and reject queries if the answer isn't found in the transcript.
 
 ## 🌐 Fully Automated Pipeline
 •	Loads the transcript.
@@ -105,7 +106,7 @@ ________________________________________
 •	Plug in LangChain evaluation for automated QA scoring.
 ________________________________________
 ## 📁 File Structure
-.
+
 ├── main_pipeline.py       # Main driver pipeline for ingestion + Q&A
 
 ├── speaker.py             # Helper script for extracting speaker roles
